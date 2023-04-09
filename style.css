@@ -13,7 +13,7 @@
   --text-gray: #94a1b2;
 }
 body {
-  background: var(--dar-bg);
+  background: url("./imagenes/MessiConLaTercera.png");
   font-family: "Inter";
 }
 .container {
@@ -31,6 +31,16 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
+
+  /* glassmorphism */
+  background: linear-gradient(0deg, #282c34 0%, rgba(17, 0, 32, 0.5) 100%);
+  border: 1px solid #ffffff4b;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+  transition: all 0.7 ease;
+  box-shadow: 0 7px 20px 5px #000;
+  overflow: hidden;
 }
 .card__img {
   max-width: 300px;
@@ -83,4 +93,27 @@ body {
 .btn--primary {
   background: var(--primary);
   color: var(--text-white);
+}
+
+/* glassmorphism */
+.card::before {
+  position: fixed;
+  content: "";
+  box-shadow: 0 0 100px 40px #ffffff28;
+  top: -10%;
+  left: -100%;
+  transform: rotate(-45deg);
+  height: 60rem;
+  transition: 0.7s all;
+}
+.card:hover::before {
+  filter: brightness(0.5);
+  top: -100%;
+  left: 200%;
+}
+.card:hover {
+  border: 1px solid #fffffff4;
+  box-shadow: 0 7px 20px 10px #ffffff6d;
+  transform: scale(1.015);
+  transition: all 0.7s ease;
 }
