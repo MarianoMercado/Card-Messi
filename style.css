@@ -13,7 +13,7 @@
   --text-gray: #94a1b2;
 }
 body {
-  background: url("./imagenes/MessiConLaTercera.png");
+  background: url("./imagenes/MessiConLaTercera.png") no-repeat center/cover;
   font-family: "Inter";
 }
 .container {
